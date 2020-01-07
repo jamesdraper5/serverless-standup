@@ -1,13 +1,13 @@
 'use strict';
 
 const sendMessage = require('./lib/sendMessage'); 
-const botChannelId = process.env.BOT_CHANNEL_ID; 
-//const coreChannelId = process.env.CORE_CHANNEL_ID; 
+//const botChannelId = process.env.BOT_CHANNEL_ID; 
+const coreChannelId = process.env.CORE_CHANNEL_ID; 
 const standupChannelId = process.env.STANDUP_CHANNEL_ID;
 
 module.exports.standup = async event => {
   try {
-    await sendMessage(`@online standup in 5 mins: https://digitalcrew.teamwork.com/call/chat/${standupChannelId}`, botChannelId);
+    await sendMessage(`@online standup in 5 mins: https://digitalcrew.teamwork.com/call/chat/${standupChannelId}`, coreChannelId);
     return {
       statusCode: 200,
       body: JSON.stringify(
@@ -33,7 +33,4 @@ module.exports.standup = async event => {
       ),
     };
   }
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };
