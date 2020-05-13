@@ -1,13 +1,13 @@
 'use strict';
 
 const sendMessage = require('./lib/sendMessage'); 
-//const botChannelId = process.env.BOT_CHANNEL_ID; 
+const customFieldsDevsChannelUrl = 'https://chat-hooks.us.teamwork.com/v1/in/1/52ed7609-7161-460f-8745-d4b319e6eec1';
+//const coreChannelUrl = '';
 const coreChannelId = process.env.CORE_CHANNEL_ID; 
-//const standupChannelId = process.env.STANDUP_CHANNEL_ID;
 
 module.exports.standup = async event => {
   try {
-    await sendMessage(`@online standup in 5 mins: https://digitalcrew.teamwork.com/call/chat/${coreChannelId}`, coreChannelId);
+    await sendMessage(`@online standup in 5 mins: https://digitalcrew.teamwork.com/call/chat/${coreChannelId}`, customFieldsDevsChannelUrl);
     return {
       statusCode: 200,
       body: JSON.stringify(
@@ -25,8 +25,7 @@ module.exports.standup = async event => {
       body: JSON.stringify(
         {
           message: 'Error',
-          error: e,
-          key: process.env.CHAT_API_KEY
+          error: e
         },
         null,
         2
