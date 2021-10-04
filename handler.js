@@ -8,7 +8,7 @@ const standupCallUrl = 'https://meet.google.com/yuk-dpcv-xgn'
 
 module.exports.standup = async event => {
   try {
-    await sendMessage(`@online standup in 5 mins - :notebook: feed me some notes - ${standupCallUrl}`, standupChannelUrl);
+    await sendMessage(`@online standup in 5 mins - :notebook: feed me some notes if you can't attend - ${standupCallUrl}`, standupChannelUrl);
     return {
       statusCode: 200,
       body: JSON.stringify(
