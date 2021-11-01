@@ -14,4 +14,4 @@ functions:
   hello:
     handler: handler.standup
     events:
-      - schedule: cron(55 9 ? * MON-FRI *)
+      - schedule: cron(55 10 ? * MON-FRI *)
