@@ -10,7 +10,7 @@ const standupCallUrl = "https://gather.town/app/6PcGDAaDAdm2mpoJ/bravooffice";
 module.exports.standup = async (event) => {
   try {
     await sendMessage(
-      `@online standup in 5 mins - :notebook: feed me some notes if you can't attend - ${standupCallUrl}`,
+      `@online standup time! ${standupCallUrl}`,
       standupChannelUrl
     );
     return {
