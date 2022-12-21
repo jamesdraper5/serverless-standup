@@ -49,7 +49,7 @@ function isStandupDay() {
 function shouldSendMessage() {
   const isYearEnd = isBeforeToday(yearEndDate);
   console.log("isYearEnd", isYearEnd);
-  if (isYearEnd) return false;
+  // if (isYearEnd) return false;
   if (!isStandupDay()) return false;
   return true;
 }
@@ -59,7 +59,7 @@ module.exports.standup = async (event) => {
     if (shouldSendMessage()) {
       console.log("sending....");
       await sendMessage(
-        `@online standup time! ${standupCallUrl}`,
+        `@online ho ho ho it's standup time! :santa: ${standupCallUrl}`,
         standupChannelUrl
       );
     }
