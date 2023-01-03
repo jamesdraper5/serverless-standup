@@ -59,7 +59,7 @@ module.exports.standup = async (event) => {
     if (shouldSendMessage()) {
       console.log("sending....");
       await sendMessage(
-        `@online ho ho ho it's standup time! :santa: ${standupCallUrl}`,
+        `@online it's standup time! ${standupCallUrl}`,
         standupChannelUrl
       );
     }
