@@ -5,7 +5,7 @@ const sendMessage = require("./lib/sendMessage");
 //const coreChannelUrl = 'https://chat-hooks.us.teamwork.com/v1/in/1/8f7a24d5-f6c5-45f9-a60c-b579d0bf4838';
 const standupChannelUrl =
   "https://chat-hooks.us.teamwork.com/v1/in/1/eff5224e-6dd2-4e04-b9b5-db04906f4db4";
-const standupCallUrl = "https://gather.town/app/6PcGDAaDAdm2mpoJ/bravooffice";
+const standupCallUrl = "https://meet.google.com/qbc-uaqs-psb";
 const standupFreeDates = require("./lib/standupFreeDates");
 
 function isToday(date) {
