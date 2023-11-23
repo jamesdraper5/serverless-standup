@@ -1,17 +1,14 @@
-# For full config options, check the docs:
-#    docs.serverless.com
-
-service: serverless-standup
-# app and org for use with dashboard.serverless.com
-app: serverless-standup-app
 org: jamesdrape
+app: serverless-standup
+service: standup-reminder
+frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
 
 functions:
-  hello:
-    handler: handler.standup
+  cronHandler:
+    handler: index.run
     events:
       - schedule: cron(30 9 ? * MON-FRI *)

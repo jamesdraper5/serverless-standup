@@ -35,7 +35,7 @@ function isStandupDay() {
   return isStandupDay;
 }
 
-module.exports.standup = async (event) => {
+module.exports.run = async (event) => {
   try {
     if (isStandupDay()) {
       console.log("sending....");
