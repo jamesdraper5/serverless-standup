@@ -1,7 +1,6 @@
 org: jamesdrape
 app: serverless-standup
 service: standup-reminder
-frameworkVersion: '3'
 
 provider:
   name: aws
