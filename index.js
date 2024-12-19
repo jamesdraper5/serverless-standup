@@ -40,7 +40,7 @@ module.exports.run = async (event) => {
     if (isStandupDay()) {
       console.log("sending....");
       await sendMessage(
-        `@online it's standup time! ${standupCallUrl}`,
+        `@online ho ho ho Merry Christmas! https://www.youtube.com/watch?v=E8gmARGvPlI`,
         standupChannelUrl
       );
     }
