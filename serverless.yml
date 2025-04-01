@@ -10,4 +10,4 @@ functions:
   cronHandler:
     handler: index.run
     events:
-      - schedule: cron(30 9 ? * MON-FRI *)
+      - schedule: cron(30 8 ? * MON-FRI *)
